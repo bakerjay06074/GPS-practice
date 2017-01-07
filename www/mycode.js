@@ -8,13 +8,13 @@ function init() {
     document.addEventListener("deviceready", onDeviceReady, false);
     //setInterval(function(){ alert("Hello, Jay"); }, 3000);
 }
+
 function onDeviceReady() {
     window.alert("In onDeviceReady");   
 } 
 
-    
-function msg()
-{
+function msg() {
+     window.alert("button pushed");
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                          [geolocationError]);   
     //setInterval(function(){ alert("Hello"); }, 3000);  
