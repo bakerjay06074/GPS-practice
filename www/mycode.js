@@ -16,7 +16,8 @@ function onDeviceReady() {
 function msg() {
      window.alert("button pushed");
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                         [geolocationError]);   
+                                         geolocationError,
+        { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });   
     //setInterval(function(){ alert("Hello"); }, 3000);  
 }
 
