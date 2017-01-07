@@ -24,8 +24,7 @@ function msg()
 // This method accepts a Position object, which contains the 
 // current GPS coordinates 
 // 
-var geolocationSuccess = function(position)
-{
+var geolocationSuccess = function(position) {
     alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
@@ -38,8 +37,7 @@ var geolocationSuccess = function(position)
  
 // onError Callback receives a PositionError object 
 // 
-function geolocationError(error)
-{
+function geolocationError(error) {
     alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n');
 }
