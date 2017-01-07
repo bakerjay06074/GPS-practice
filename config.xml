@@ -7,7 +7,7 @@
 
 <!-- versionCode is optional and Android only -->
 
-  <name>Button Event Practice</name>
+  <name>GPS Practice</name>
 
   <description>
       An example for phonegap build docs.
@@ -17,6 +17,8 @@
       Jay Baker
   </author>
   <!-- <plugin name="cordova-plugin-file" spec="~4.3.1" /> -->
-  <!--Added following plugin for SQLite -->
-    <plugin spec="https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free.git#1186a7e" source="git" /> 
+  <!--Added following plugin for SQLite COMMENTED OUT FOR NOW-->
+    <!-- <plugin spec="https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free.git#1186a7e" source="git" /> -->
+  <!-- Added following plugin for GPS functionality -->
+    <plugin name="cordova-plugin-geolocation" spec="~2.4.1" />
 </widget>
