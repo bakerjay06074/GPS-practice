@@ -1,2 +1,3 @@
-# button-event-practice
-https://phonegappro.com/tutorials/phonegap-events-tutorials/
+# GPS-practice
+https://github.com/bakerjay06074/GPS-practice
+GPS practice
