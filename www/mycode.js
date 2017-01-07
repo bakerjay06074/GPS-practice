@@ -25,7 +25,7 @@ function msg() {
 // current GPS coordinates 
 // 
 var geolocationSuccess = function(position) {
-    alert('Latitude: '          + position.coords.latitude          + '\n' +
+    window.alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
           'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -38,7 +38,7 @@ var geolocationSuccess = function(position) {
 // onError Callback receives a PositionError object 
 // 
 function geolocationError(error) {
-    alert('code: '    + error.code    + '\n' +
+    window.alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n');
 }
  
