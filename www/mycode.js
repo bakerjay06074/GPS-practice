@@ -1,6 +1,7 @@
 //declare database
 //var db = null;
 var isStopButtonPushed = false;
+var watchID;
 
 function init() {
     // the next line makes it impossible to see Contacts on the HTC Evo since it
@@ -17,7 +18,7 @@ function onDeviceReady() {
 function msg() {
     window.alert("button pushed");
    
-    var watchID = navigator.geolocation.watchPosition(geolocationSuccess,
+    watchID = navigator.geolocation.watchPosition(geolocationSuccess,
                                          geolocationError,
         { enableHighAccuracy: true });   
      
@@ -38,8 +39,8 @@ var geolocationSuccess = function(position) {
           'Speed: '             + position.coords.speed             + '\n' +
           'Timestamp: '         + position.timestamp                + '\n');
     */
-    tbLongitude.value = position.coords.longitude;
-    tbLatitude.value = position.coords.latitude;
+    document.getElementById("tbLongitude").value = position.coords.longitude;
+     document.getElementById("tbLatitude").value = position.coords.latitude;
 };
  
 // onError Callback receives a PositionError object 
@@ -51,5 +52,6 @@ function geolocationError(error) {
  
 function stop_button_pushed() {
     isStopButtonPushed = true;
+    navigator.geolocation.clearWatch(watchID);
 }
     
