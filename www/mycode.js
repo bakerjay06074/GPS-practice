@@ -1,5 +1,6 @@
 //declare database
 //var db = null;
+var isStopButtonPushed = false;
 
 function init() {
     // the next line makes it impossible to see Contacts on the HTC Evo since it
@@ -14,11 +15,12 @@ function onDeviceReady() {
 } 
 
 function msg() {
-     window.alert("button pushed");
-    navigator.geolocation.getCurrentPosition(geolocationSuccess,
+    window.alert("button pushed");
+   
+    var watchID = navigator.geolocation.watchPosition(geolocationSuccess,
                                          geolocationError,
-        { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });   
-    //setInterval(function(){ alert("Hello"); }, 3000);  
+        { enableHighAccuracy: true });   
+     
 }
 
 // onSuccess Callback 
@@ -26,6 +28,7 @@ function msg() {
 // current GPS coordinates 
 // 
 var geolocationSuccess = function(position) {
+    /*
     window.alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
@@ -34,6 +37,9 @@ var geolocationSuccess = function(position) {
           'Heading: '           + position.coords.heading           + '\n' +
           'Speed: '             + position.coords.speed             + '\n' +
           'Timestamp: '         + position.timestamp                + '\n');
+    */
+    tbLongitude.value = position.coords.longitude;
+    tbLatitude.value = position.coords.latitude;
 };
  
 // onError Callback receives a PositionError object 
@@ -43,4 +49,7 @@ function geolocationError(error) {
           'message: ' + error.message + '\n');
 }
  
-
+function stop_button_pushed() {
+    isStopButtonPushed = true;
+}
+    
