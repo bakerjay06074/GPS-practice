@@ -12,15 +12,14 @@ function init() {
 }
 
 function onDeviceReady() {
-    window.alert("In onDeviceReady");   
+    window.alert("In onDeviceReady");
+    document.getElementById("tbLongitude").value = 100
 } 
 
 function msg() {
     window.alert("button pushed");
    
-    watchID = navigator.geolocation.watchPosition(geolocationSuccess,
-                                         geolocationError,
-        { enableHighAccuracy: true });   
+    watchID = navigator.geolocation.watchPosition(geolocationSuccess);   
      
 }
 
@@ -46,8 +45,8 @@ var geolocationSuccess = function(position) {
 // onError Callback receives a PositionError object 
 // 
 function geolocationError(error) {
-    window.alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
+    /* window.alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');  */
 }
  
 function stop_button_pushed() {
