@@ -19,7 +19,9 @@ function onDeviceReady() {
 function msg() {
     window.alert("button pushed");
    
-    watchID = navigator.geolocation.watchPosition(geolocationSuccess);   
+    watchID = navigator.geolocation.watchPosition(geolocationSuccess,
+                                                 geolocationError,
+                                                  {mximumAge: 10000, timeout: 30000, enableHighAccruacy:true});   
      
 }
 
@@ -45,8 +47,7 @@ var geolocationSuccess = function(position) {
 // onError Callback receives a PositionError object 
 // 
 function geolocationError(error) {
-    /* window.alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');  */
+    window.alert('code: ' + error.code); 
 }
  
 function stop_button_pushed() {
