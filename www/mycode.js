@@ -56,6 +56,7 @@ var geolocationSuccess = function(position) {
     */
      document.getElementById("tbLongitude").value = position.coords.longitude;
      document.getElementById("tbLatitude").value = position.coords.latitude;
+    window.alert('got a new position');
 };
  
 // onError Callback receives a PositionError object 
