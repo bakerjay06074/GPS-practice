@@ -19,12 +19,18 @@ function onDeviceReady() {
 function msg() {
     window.alert("button pushed");
    
+    /*
     watchID = navigator.geolocation.watchPosition(geolocationSuccess,
                                                  geolocationError,
                                                   {mximumAge: 3600000,
                                                    timeout: 3000,
-                                                   enableHighAccruacy:true});   
-     
+                                                   enableHighAccruacy:true}); 
+    */
+     navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                                                 geolocationError,
+                                                  {mximumAge: 3600000,
+                                                   timeout: 5000,
+                                                   enableHighAccruacy:true});  
 }
 
 // onSuccess Callback 
