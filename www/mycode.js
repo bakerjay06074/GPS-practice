@@ -21,7 +21,9 @@ function msg() {
    
     watchID = navigator.geolocation.watchPosition(geolocationSuccess,
                                                  geolocationError,
-                                                  {mximumAge: 10000, timeout: 30000, enableHighAccruacy:true});   
+                                                  {mximumAge: 3600000,
+                                                   timeout: 3000,
+                                                   enableHighAccruacy:true});   
      
 }
 
@@ -49,9 +51,10 @@ var geolocationSuccess = function(position) {
 function geolocationError(error) {
     window.alert('code: ' + error.code); 
 }
- 
+
+/*
 function stop_button_pushed() {
     isStopButtonPushed = true;
     navigator.geolocation.clearWatch(watchID);
 }
-    
+*/    
