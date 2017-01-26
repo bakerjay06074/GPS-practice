@@ -27,7 +27,7 @@ function msg() {
                                                    timeout: 3000,
                                                    enableHighAccruacy:true}); 
     */
-     timerID = setInterval(function(){jayGetPosition()}, 7000);
+     timerID = setInterval(function(){jayGetPosition()}, 30000);
 }
 
 function jayGetPosition() {
@@ -35,7 +35,7 @@ function jayGetPosition() {
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                                  geolocationError,
                                                   {mximumAge: 3600000,
-                                                   timeout: 5000,
+                                                   timeout: 25000,
                                                    enableHighAccruacy:true});  
 }
 
