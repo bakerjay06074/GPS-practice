@@ -18,16 +18,16 @@ function onDeviceReady() {
 } 
 
 function msg() {
-    //window.alert("button pushed");
+   window.alert("button pushed");
    
-    /*
+    
     watchID = navigator.geolocation.watchPosition(geolocationSuccess,
                                                  geolocationError,
                                                   {mximumAge: 3600000,
-                                                   timeout: 3000,
+                                                   timeout: 65000,
                                                    enableHighAccruacy:true}); 
-    */
-     timerID = setInterval(function(){jayGetPosition()}, 30000);
+   
+     //timerID = setInterval(function(){jayGetPosition()}, 30000);
 }
 
 function jayGetPosition() {
@@ -56,7 +56,8 @@ var geolocationSuccess = function(position) {
     */
      document.getElementById("tbLongitude").value = position.coords.longitude;
      document.getElementById("tbLatitude").value = position.coords.latitude;
-    window.alert('got a new position');
+     navigator.vibrate(3000);
+    //window.alert('got a new position');
 };
  
 // onError Callback receives a PositionError object 
