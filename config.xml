@@ -20,7 +20,7 @@
   <!--Added following plugin for SQLite COMMENTED OUT FOR NOW-->
     <!-- <plugin spec="https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free.git#1186a7e" source="git" /> -->
   <!-- Added following plugin for GPS functionality -->
-    <preference name="phonegap-version" value="cli-6.3.1" />
-    <plugin name="cordova-plugin-geolocation" spec="~2.4.1" />
+   <!-- <preference name="phonegap-version" value="cli-6.3.1" /> -->
+   <!-- <plugin name="cordova-plugin-geolocation" spec="~2.4.1" /> -->
     <plugin name="cordova-plugin-vibration" spec="~2.1.3" />
 </widget>
