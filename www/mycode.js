@@ -23,7 +23,7 @@ function msg() {
     
     watchID = navigator.geolocation.watchPosition(geolocationSuccess,
                                                  geolocationError,
-                                                  {mximumAge: 0,
+                                                  {maximumAge: 60000,
                                                    timeout: 30000,
                                                    enableHighAccruacy:true}); 
    
@@ -34,7 +34,7 @@ function jayGetPosition() {
     
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                                  geolocationError,
-                                                  {mximumAge: 3600000,
+                                                  {maximumAge: 60000,
                                                    timeout: 25000,
                                                    enableHighAccruacy:true});  
 }
